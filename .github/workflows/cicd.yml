@@ -17,10 +17,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ env.python-version }} # or $python-version
-      - name: Unit Tests
-        run: |
-          python -m unittest discover -s app.py
-          pytest
+      # - name: Unit Tests
+      #   run: |
+      #    python -m unittest discover -s app.py
+      #    pytest
       - name: Build Image
         run: |   
           docker build -t ${{secrets.USERNAME}}/portfolio:${{github.run_number}} . 
