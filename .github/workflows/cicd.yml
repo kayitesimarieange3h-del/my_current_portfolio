@@ -19,7 +19,7 @@ jobs:
           python-version: ${{ env.python-version }} # or $python-version
       - name: Unit Tests
         run: |
-          python -m unittest discover -s tests
+          python -m unittest discover -s app.py
           pytest
       - name: Build Image
         run: |   
